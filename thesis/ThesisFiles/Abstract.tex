@@ -1,0 +1,23 @@
+%!TEX root = ../Demo.tex
+% 中文摘要
+
+\begin{abstract}
+随着智能设备越来越多地融入我们的日常生活，这些设备的安全性已经成为一个重要的问题。ARM处理器系列推出了TrustZone技术，通过称为安全世界的隔离执行环境来为普通世界提供安全服务或操作。启用了TrustZone的处理器中的高速缓存被扩展了一个NS位来标识一个缓存行是由安全世界还是正常世界使用。这种高速缓存的设计提高了系统性能，因为它避免了在两个世界切换期间的缓存刷新操作。然而，这样的设计也带来了两个世界的缓存争夺及缓存驱逐现象，为本文的攻击提供基本条件。
+
+本文实现了一种基于时间的TrustZone缓存侧信道信息泄漏攻击，该攻击方法利用了普通世界和安全世界之间的高速缓存争夺，以恢复一些安全世界中本无法获取的重要数据或信息。本文的攻击目标是运行在TrustZone的AES加密程序中的密钥，利用加密过程中的Te表的地址与L1D缓存之间的映射，使用Prime+Probe缓存攻击方法来判断加密程序在执行过程中是否使用到了某些Te表项，从而根据获得的密文推断出最后一轮密钥，以此恢复出初始的16字节密钥。
+
+本文的攻击方法利用Arm处理器内部的性能监测单元作为探测数据加载的CPU周期的工具，在普通世界的程序中实现了基于L1D cache的安全世界程序的侧信道攻击，并且成功在平均801.07次AES加密内提取出AES的加密密钥，平均耗时0.75秒。同时，该攻击方法基于支持TrustZone的ARM处理器的缓存设计，因此它对相同架构的设备均有潜在的威胁，故本文同样提出了一些缓存攻击对抗方法以及类似领域在未来的潜在发展方向。
+
+\end{abstract}
+\keywords{Arm TrustZone, Prime+Probe攻击, OpenSSL AES, 高速缓存}
+
+% 英文摘要
+\begin{enabstract}
+With intelligent devices progressively embedded into our lives, their security has become a major concern. TrustZone technology was introduced with the ARM processor series, which provides secure services or operations to the normal world through an isolated execution environment called the secure world. In a TrustZone-enabled CPU, a NS bit is added to the cache to determine if a cache line is utilized by the secure or the normal world. This cache architecture enhances system performance by avoiding cache flush operations during the changeover between the two worlds. However, such a design also introduces the phenomenon of cache contention and cache eviction between the two worlds, providing the basic conditions for the attack in this thesis.
+
+We implement a time-based TrustZone cache side channel attack, which takes advantage of cache contention between the two world, in order to retrieve essential data or information that would otherwise be unreachable in the secure world. The attack in this thesis targets the key in the AES encryption program running in TrustZone, and uses the mapping between the address of the Te table during encryption and the L1D cache. Based on this, the thesis uses the Prime+Probe cache attack to determine whether the encryption program uses some Te table entries during execution. Thus, we can infer the last round of key based on the obtained ciphertext, and then recover the initial key. 
+
+The attack method in this thesis uses the performance monitoring unit inside the Arm processor as a tool to detect the CPU cycles of data loading, and implements the L1D cache-based side-channel attack on a secure world program. The experiment can successfully extract the AES encryption key within an average of 801.07 rounds encryption and 0.75 seconds. At the same time, because the attack approach is based on the cache design of TrustZone enabled ARM processors, it poses a risk to devices with similar architecture. Lastly, this thesis also proposes some cache attack countermeasures and potential future directions in similar areas.
+
+\end{enabstract}
+\enkeywords{Arm TrustZone, Prime+Probe attack, OpenSSL AES, Cache}

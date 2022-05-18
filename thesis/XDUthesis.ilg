@@ -1,0 +1,17 @@
+This is makeindex, version 2.15 [TeX Live 2020/W32TeX] (kpathsea + Thai support).
+Scanning style file d:/envioflatex/texlive/2020/texmf-dist/makeindex/latex/gglo.ist........
+** Input style error (file = d:/envioflatex/texlive/2020/texmf-dist/makeindex/latex/gglo.ist, line = 66):
+   -- Unknown specifier lethead_prefix.
+** Input style error (file = d:/envioflatex/texlive/2020/texmf-dist/makeindex/latex/gglo.ist, line = 67):
+   -- Unknown specifier lethead_suffix.
+** Input style error (file = d:/envioflatex/texlive/2020/texmf-dist/makeindex/latex/gglo.ist, line = 68):
+   -- Unknown specifier lethead_flag.
+......done (14 attributes redefined, 3 ignored).
+Scanning input file XDUthesis.glo....
+!! Input index error (file = XDUthesis.glo, line = 32):
+   -- Extra `>' at position 134 of first argument.
+done (39 entries accepted, 1 rejected).
+Sorting entries....done (206 comparisons).
+Generating output file XDUthesis.gls....done (76 lines written, 0 warnings).
+Output written in XDUthesis.gls.
+Transcript written in XDUthesis.ilg.

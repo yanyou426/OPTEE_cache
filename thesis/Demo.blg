@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Demo.aux
+The style file: gbt7714-unsrt.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: ThesisFiles/RefFile.bib
+Repeated entry---line 246 of file ThesisFiles/RefFile.bib
+ : @inproceedings{ristenpart2009hey
+ :                                 ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in bernstein2005cache
+You've used 29 entries,
+            3798 wiz_defined-function locations,
+            964 strings with 11267 characters,
+and the built_in function-call counts, 159167 in all, are:
+= -- 1996
+> -- 18496
+< -- 24462
++ -- 6781
+- -- 238
+* -- 1028
+:= -- 22097
+add.period$ -- 87
+call.type$ -- 29
+change.case$ -- 56
+chr.to.int$ -- 6065
+cite$ -- 30
+duplicate$ -- 649
+empty$ -- 1791
+format.name$ -- 483
+if$ -- 41332
+int.to.chr$ -- 3
+int.to.str$ -- 30
+missing$ -- 0
+newline$ -- 154
+num.names$ -- 87
+pop$ -- 8766
+preamble$ -- 1
+purify$ -- 29
+quote$ -- 0
+skip$ -- 16092
+stack$ -- 0
+substring$ -- 6957
+swap$ -- 90
+text.length$ -- 283
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 240
+warning$ -- 1
+while$ -- 389
+width$ -- 0
+write$ -- 425
+(There was 1 error message)

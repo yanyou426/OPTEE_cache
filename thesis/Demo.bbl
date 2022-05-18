@@ -1,0 +1,211 @@
+\begin{thebibliography}{29}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\relax\else
+  \urlstyle{same}\fi
+\providecommand{\href}[2]{\url{#2}}
+\providecommand{\doi}[1]{\href{https://doi.org/#1}{#1}}
+
+\bibitem[Zhang\ et~al.(2016{\natexlab{a}})Zhang, Sun, Lou, and
+  Hou]{zhang2016case}
+Zhang~N, Sun~K, Lou~W, et~al.
+\newblock Case: Cache-assisted secure execution on arm
+  processors\allowbreak[C]//\allowbreak{}2016 IEEE Symposium on Security and
+  Privacy (SP).
+\newblock IEEE, 2016{\natexlab{a}}: 72-90.
+
+\bibitem[Azab\ et~al.(2014)Azab, Ning, Shah, Chen, Bhutkar, Ganesh, Ma, and
+  Shen]{azab2014hypervision}
+Azab~A~M, Ning~P, Shah~J, et~al.
+\newblock Hypervision across worlds: Real-time kernel protection from the arm
+  trustzone secure world\allowbreak[C]//\allowbreak{}Proceedings of the 2014
+  ACM SIGSAC Conference on Computer and Communications Security.
+\newblock 2014: 90-102.
+
+\bibitem[Zhou\ et~al.(2014)Zhou, Wang, Chen, and Wang]{zhou2014armlock}
+Zhou~Y, Wang~X, Chen~Y, et~al.
+\newblock Armlock: Hardware-based fault isolation for
+  arm\allowbreak[C]//\allowbreak{}Proceedings of the 2014 ACM SIGSAC conference
+  on computer and communications security.
+\newblock 2014: 558-569.
+
+\bibitem[Jang\ et~al.(2015)Jang, Kong, Kim, Kim, and Kang]{jang2015secret}
+Jang~J~S, Kong~S, Kim~M, et~al.
+\newblock Secret: Secure channel between rich execution environment and trusted
+  execution environment.\allowbreak[C]//\allowbreak{}NDSS.
+\newblock 2015: 1-15.
+
+\bibitem[Kocher\ et~al.(1999)Kocher, Jaffe, and Jun]{kocher1999differential}
+Kocher~P, Jaffe~J, Jun~B.
+\newblock Differential power analysis\allowbreak[C]//\allowbreak{}Annual
+  international cryptology conference.
+\newblock Springer, 1999: 388-397.
+
+\bibitem[Kocher(1996)]{kocher1996timing}
+Kocher~P~C.
+\newblock Timing attacks on implementations of diffie-hellman, rsa, dss, and
+  other systems\allowbreak[C]//\allowbreak{}Annual International Cryptology
+  Conference.
+\newblock Springer, 1996: 104-113.
+
+\bibitem[王崇\ 等(2021)王崇, 魏帅, 张帆, and
+  宋克]{王崇2021缓存侧信道防御研究综述}
+王崇, 魏帅, 张帆, 等.
+\newblock 缓存侧信道防御研究综述\allowbreak[J].
+\newblock 计算机研究与发展, 2021, 58\penalty0 (4):\penalty0 794.
+
+\bibitem[Genkin\ et~al.(2016)Genkin, Pachmanov, Pipman, Tromer, and
+  Yarom]{genkin2016ecdsa}
+Genkin~D, Pachmanov~L, Pipman~I, et~al.
+\newblock Ecdsa key extraction from mobile devices via nonintrusive physical
+  side channels\allowbreak[C]//\allowbreak{}Proceedings of the 2016 ACM SIGSAC
+  Conference on Computer and Communications Security.
+\newblock 2016: 1626-1638.
+
+\bibitem[Genkin\ et~al.(2014)Genkin, Shamir, and Tromer]{genkin2014rsa}
+Genkin~D, Shamir~A, Tromer~E.
+\newblock Rsa key extraction via low-bandwidth acoustic
+  cryptanalysis\allowbreak[C]//\allowbreak{}Annual cryptology conference.
+\newblock Springer, 2014: 444-461.
+
+\bibitem[Bernstein(2005)]{bernstein2005cache}
+Bernstein~D~J.
+\newblock Cache-timing attacks on aes\allowbreak[J].
+\newblock 2005.
+
+\bibitem[Ac{\i}i{\c{c}}mez\ et~al.(2006)Ac{\i}i{\c{c}}mez and
+  Ko{\c{c}}]{aciiccmez2006trace}
+Ac{\i}i{\c{c}}mez~O, Ko{\c{c}}~{\c{C}}~K.
+\newblock Trace-driven cache attacks on aes (short
+  paper)\allowbreak[C]//\allowbreak{}International Conference on Information
+  and Communications Security.
+\newblock Springer, 2006: 112-121.
+
+\bibitem[Percival(2005)]{percival2005cache}
+Percival~C.
+\newblock Cache missing for fun and profit\allowbreak[M].
+\newblock BSDCan Ottawa, 2005.
+
+\bibitem[Osvik\ et~al.(2006)Osvik, Shamir, and Tromer]{osvik2006cache}
+Osvik~D~A, Shamir~A, Tromer~E.
+\newblock Cache attacks and countermeasures: the case of
+  aes\allowbreak[C]//\allowbreak{}Cryptographers’ track at the RSA
+  conference.
+\newblock Springer, 2006: 1-20.
+
+\bibitem[Gullasch\ et~al.(2011)Gullasch, Bangerter, and
+  Krenn]{gullasch2011cache}
+Gullasch~D, Bangerter~E, Krenn~S.
+\newblock Cache games--bringing access-based cache attacks on aes to
+  practice\allowbreak[C]//\allowbreak{}2011 IEEE Symposium on Security and
+  Privacy.
+\newblock IEEE, 2011: 490-505.
+
+\bibitem[Yarom\ et~al.(2014)Yarom and Falkner]{yarom2014flush+}
+Yarom~Y, Falkner~K.
+\newblock $\{$FLUSH+ RELOAD$\}$: A high resolution, low noise, l3 cache
+  $\{$Side-Channel$\}$ attack\allowbreak[C]//\allowbreak{}23rd USENIX security
+  symposium (USENIX security 14).
+\newblock 2014: 719-732.
+
+\bibitem[袁稚炜(2019)]{袁稚炜2019基于差分}
+袁稚炜.
+\newblock 基于差分 F\_ (LUSH)+ R\_ (ELOAD)
+  的缓存侧信道攻击方法研究\allowbreak[D].
+\newblock 南京航空航天大学, 2019.
+
+\bibitem[Ristenpart\ et~al.(2009)Ristenpart, Tromer, Shacham, and
+  Savage]{ristenpart2009hey}
+Ristenpart~T, Tromer~E, Shacham~H, et~al.
+\newblock Hey, you, get off of my cloud: exploring information leakage in
+  third-party compute clouds\allowbreak[C]//\allowbreak{}Proceedings of the
+  16th ACM conference on Computer and communications security.
+\newblock 2009: 199-212.
+
+\bibitem[Zhang\ et~al.(2012)Zhang, Juels, Reiter, and
+  Ristenpart]{zhang2012cross}
+Zhang~Y, Juels~A, Reiter~M~K, et~al.
+\newblock Cross-vm side channels and their use to extract private
+  keys\allowbreak[C]//\allowbreak{}Proceedings of the 2012 ACM conference on
+  Computer and communications security.
+\newblock 2012: 305-316.
+
+\bibitem[Wei{\ss}\ et~al.(2012)Wei{\ss}, Heinz, and Stumpf]{weiss2012cache}
+Wei{\ss}~M, Heinz~B, Stumpf~F.
+\newblock A cache timing attack on aes in virtualization
+  environments\allowbreak[C]//\allowbreak{}International Conference on
+  Financial Cryptography and Data Security.
+\newblock Springer, 2012: 314-328.
+
+\bibitem[Lipp\ et~al.(2016)Lipp, Gruss, Spreitzer, Maurice, and
+  Mangard]{lipp2016armageddon}
+Lipp~M, Gruss~D, Spreitzer~R, et~al.
+\newblock $\{$ARMageddon$\}$: Cache attacks on mobile
+  devices\allowbreak[C]//\allowbreak{}25th USENIX Security Symposium (USENIX
+  Security 16).
+\newblock 2016: 549-564.
+
+\bibitem[Zhang\ et~al.(2016{\natexlab{b}})Zhang, Xiao, and
+  Zhang]{zhang2016return}
+Zhang~X, Xiao~Y, Zhang~Y.
+\newblock Return-oriented flush-reload side channels on arm and their
+  implications for android devices\allowbreak[C]//\allowbreak{}Proceedings of
+  the 2016 ACM SIGSAC Conference on Computer and Communications Security.
+\newblock 2016{\natexlab{b}}: 858-870.
+
+\bibitem[Zhang\ et~al.(2016{\natexlab{c}})Zhang, Sun, Shands, Lou, and
+  Hou]{zhang2016truspy}
+Zhang~N, Sun~K, Shands~D, et~al.
+\newblock Truspy: Cache side-channel information leakage from the secure world
+  on arm devices\allowbreak[J].
+\newblock Cryptology ePrint Archive, 2016.
+
+\bibitem[Guanciale\ et~al.(2016)Guanciale, Nemati, Baumann, and
+  Dam]{guanciale2016cache}
+Guanciale~R, Nemati~H, Baumann~C, et~al.
+\newblock Cache storage channels: Alias-driven attacks and verified
+  countermeasures\allowbreak[C]//\allowbreak{}2016 IEEE Symposium on Security
+  and Privacy (SP).
+\newblock IEEE, 2016: 38-55.
+
+\bibitem[Holdings(2009)]{holdings2009arm}
+Holdings~A.
+\newblock Arm security technology: Building a secure system using trustzone
+  technology\allowbreak[J].
+\newblock Retrieved on June, 2009, 10:\penalty0 2021.
+
+\bibitem[Neve\ et~al.(2006)Neve and Seifert]{neve2006advances}
+Neve~M, Seifert~J~P.
+\newblock Advances on access-driven cache attacks on
+  aes\allowbreak[C]//\allowbreak{}International Workshop on Selected Areas in
+  Cryptography.
+\newblock Springer, 2006: 147-162.
+
+\bibitem[Crane\ et~al.(2015)Crane, Homescu, Brunthaler, Larsen, and
+  Franz]{crane2015thwarting}
+Crane~S, Homescu~A, Brunthaler~S, et~al.
+\newblock Thwarting cache side-channel attacks through dynamic software
+  diversity.\allowbreak[C]//\allowbreak{}NDSS.
+\newblock 2015: 8-11.
+
+\bibitem[Irazoqui\ et~al.(2015)Irazoqui, Eisenbarth, and Sunar]{irazoqui2015s}
+Irazoqui~G, Eisenbarth~T, Sunar~B.
+\newblock S $\&$ a: A shared cache attack that works across cores and defies vm
+  sandboxing--and its application to aes\allowbreak[C]//\allowbreak{}2015 IEEE
+  Symposium on Security and Privacy.
+\newblock IEEE, 2015: 591-604.
+
+\bibitem[Liu\ et~al.(2015)Liu, Yarom, Ge, Heiser, and Lee]{liu2015last}
+Liu~F, Yarom~Y, Ge~Q, et~al.
+\newblock Last-level cache side-channel attacks are
+  practical\allowbreak[C]//\allowbreak{}2015 IEEE symposium on security and
+  privacy.
+\newblock IEEE, 2015: 605-622.
+
+\bibitem[Hund\ et~al.(2013)Hund, Willems, and Holz]{hund2013practical}
+Hund~R, Willems~C, Holz~T.
+\newblock Practical timing side channel attacks against kernel space
+  aslr\allowbreak[C]//\allowbreak{}2013 IEEE Symposium on Security and Privacy.
+\newblock IEEE, 2013: 191-205.
+
+\end{thebibliography}

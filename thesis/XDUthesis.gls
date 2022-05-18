@@ -1,0 +1,76 @@
+
+ \begin{theglossary} 
+
+    \makeatletter\scan@allowedfalse
+
+  \item v0.1\efill 
+ \subitem \verb*+\maketitle+:\ 对封面相关关键字进行配置\pfill 21
+    \subitem General:\ finish bachelor thesis\pfill 1
+      \subsubitem 其他配置\pfill 23
+      \subsubitem 对控制参数以及相关标题进行汉化\pfill 
+		17
+      \subsubitem 本模板用到的大部分宏包及相关参数配置于此处\pfill 
+		11
+  \item v0.1.1\efill 
+ \subitem General:\ 修改脚注每页重新编号，优化带圈编号项。\pfill 15
+  \item v0.1.2\efill 
+ \subitem General:\ 优化摘要环境，修复跨页显示不正常问题\pfill 17
+  \item v0.1.3\efill 
+ \subitem \verb*+\maketitle+:\ 增加关键字定义，使得模板更加规范。\pfill 19, 21
+    \subitem General:\ 修复参考文献字体为五号字体，增加非角标参考文献命令\pfill 
+		15
+  \item v0.1.4\efill 
+ \subitem \verb*+\make@abstract+:\ 新加字体族，用于修正封面页标题英文字体非黑体以及中文摘要关键词中，英文关键词未加粗问题，感谢 \href  {https://github.com/lanthree}{lanthree} 同学\pfill 
+		18
+    \subitem \verb*+\maketitle+:\ 增加校徽Logo可选命令\pfill 19
+    \subitem General:\ 修复生成的PDF乱码问题，新添加两个可选指令\pfill 11
+      \subsubitem 修复英文关键词名称不准确问题\pfill 17
+      \subsubitem 非Windows系统需要修改为Fandol字体族\pfill 
+		12
+  \item v0.1.5\efill 
+ \subitem \verb*+\maketitle+:\ 增加word下1.5倍行距判断\pfill 19
+    \subitem General:\ 修正页面边距，添加装订线距离1cm. 增加设置word下1.5倍行距判断\pfill 
+		13
+      \subsubitem 添加WordOneHalf参数，可选择行间距为Word下的1.5倍行间距\pfill 
+		11
+  \item v0.1.6\efill 
+ \subitem General:\ 修正目录中章的索引符为空问题，修正为点。感谢 \href  {https://github.com/git4xuan}{git4xuan} 同学。\pfill 
+		15
+      \subsubitem 修正章节标题错误加粗问题 By \href  {https://github.com/XDXX}{XDXX}\pfill 
+		15
+      \subsubitem 修该原来图表编号后冒号为大空格，符合工作手册的样例。感谢 \href  {https://github.com/git4xuan}{git4xuan} 同学。\pfill 
+		13
+  \item v0.1.7\efill 
+ \subitem General:\ 中文Fandol字体族下，添加英文字体设置，防止默认字体不符合要求\pfill 
+		12
+      \subsubitem 删除fontenc宏包，使得正文英文字体相关设置生效\pfill 
+		13
+      \subsubitem 调整参考文献条目间距为0.2ex\pfill 13
+  \item v0.1.8\efill 
+ \subitem \verb*+\make@abstract+:\ Times New Roman 正文粗体不正确问题已解决；兼容PDFLaTeX，但貌似不起作用\pfill 
+		18
+    \subitem \verb*+\maketitle+:\ 重新修正封面\pfill 19
+    \subitem General:\ 修改备用字体设置\pfill 23
+      \subsubitem 修正字体设置\pfill 11
+      \subsubitem 修正字体设置，去除Fandol字体族\pfill 12
+      \subsubitem 根据一位15级的学弟/学妹的提问，添加新的目录样式，新样式去除了标题与页码之间的点连接\pfill 
+		15
+  \item v0.1.9\efill 
+ \subitem \verb*+\make@abstract+:\ 新增fandol字体判断：解决用户不设置字体，非Windows系统下，没有SimHei字体错误。Mac系统下有待验证\pfill 
+		18
+    \subitem General:\ 增加摘要、目录的页眉标题定义，使得文章标题内容与页眉标题内容分别定义\pfill 
+		17
+      \subsubitem 新增fandol字体判断\pfill 12
+      \subsubitem 新增fandol字体判断；新增print参数增加电子版预览样式（两边等宽）\pfill 
+		11
+      \subsubitem 新增三个定理环境；修改目录标题为中间带空格的\pfill 
+		23
+      \subsubitem 新增致谢页眉标题\pfill 16
+      \subsubitem 重定义了目录命令，文章内容目录标题以页眉标题分别设置\pfill 
+		14
+      \subsubitem 重新调整了无点连接模式的标题缩进\pfill 
+		15
+      \subsubitem 默认页面两边对其，便于电子版书写时预览，添加打印参数，打印时恢复手册要求\pfill 
+		13
+
+ \end{theglossary}

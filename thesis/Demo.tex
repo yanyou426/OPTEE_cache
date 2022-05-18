@@ -1,0 +1,111 @@
+%!TEX program = xelatex
+\documentclass[WordOneHalf,print]{XDUthesis}   %%启用默认字体设置，word 1.5 倍行距，打印样式
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{listings}%插入代码块
+\usepackage{xcolor}
+\lstset{
+	numbers=left, 
+	numberstyle= \tiny, 
+	keywordstyle= \color{ blue!70},
+	commentstyle= \color{red!50!green!50!blue!50}, 
+	frame=shadowbox, % 阴影效果
+	rulesepcolor= \color{ red!20!green!20!blue!20} ,
+	escapeinside=``, % 英文分号中可写入中文
+	xleftmargin=2em,xrightmargin=2em, aboveskip=1em,
+	framexleftmargin=2em
+} 
+
+\floatname{algorithm}{算法}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+% 参数设置：
+%     功能设置：
+%         <nologo>: 封面页去除logo（默认有logo）
+%         <WordOneHalf>: Word 1.5 倍行距（近似）（默认关闭）
+%         <contentsnd>: 目录去除点的连接
+%         <print>:  打印样式，保留装订线，默认为预览样式
+%     以下为字体设置，仅在XeLaTeX和LuaLaTeX下有效；不设置由系统自动检测【Windows:windowsn, mac:mac】
+%         <windowsn>: 由工作手册指定的字体设置，xelatex 下复制会乱码（不影响打印）
+%         <windowsf>: 宋体的粗体版本由华文中宋替代，PDF复制不会有乱码；粗体黑体会有乱码
+%         <adobe>: 采用对应的Adobe宋体和黑体作为中易宋体和黑体的替代；PDF复制无乱码
+%         <mac>: Mac系统下的字体
+% 
+
+\title{Arm Trustzone侧信道脆弱性研究与攻击实现}
+\author{何开颜}
+\date{\qquad 年\qquad 月\qquad 日} %%%  请勿编辑这行
+%题目拆分：用于封面
+\septitleA{Arm Trustzone侧信道}%如果论文题目长度<=11中文字符只需填此项即可B项空着
+\septitleB{脆弱性研究与攻击实现}%如果论文题目长度>11中文字符, 建议拆分为10+x or 11+x 将剩余x个字符填在此处。
+\class{1803012}%班级号
+\schoolnumber{18030100178}%学号
+\major{计算机科学与技术}%专业
+\school{计算机科学与技术学院}%学院
+\outersupervisor{谷大武}%指导老师
+\supervisor{杨利英}%指导老师
+
+
+%\usepackage[BoldFont]{xeCJK}
+
+\graphicspath{{ThesisFiles/}{Figure/}}
+
+\makeatletter
+\newenvironment{breakablealgorithm}
+{% \begin{breakablealgorithm}
+	\begin{center}
+		\refstepcounter{algorithm}% New algorithm
+		\hrule height.8pt depth0pt \kern2pt% \@fs@pre for \@fs@ruled
+		\renewcommand{\caption}[2][\relax]{% Make a new \caption
+			{\raggedright\textbf{\ALG@name~\thealgorithm} ##2\par}%
+			\ifx\relax##1\relax % #1 is \relax
+			\addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##2}%
+			\else % #1 is not \relax
+			\addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##1}%
+			\fi
+			\kern2pt\hrule\kern2pt
+		}
+	}{% \end{breakablealgorithm}
+		\kern2pt\hrule\relax% \@fs@post for \@fs@ruled
+	\end{center}
+}
+\makeatother
+
+\begin{document}
+
+% 摘要
+\input{ThesisFiles/Abstract}
+
+% 往PDF属性里面写下关键词信息
+\makeatletter
+\XDU@setpdf@keywords
+%\make@abstract%
+%
+%\frontmatter
+%\tableofcontents%
+%\mainmatter
+\makeatother
+
+\maketitle
+
+% 文章主要部分
+\input{ThesisFiles/Chapters}
+
+% 致谢
+\input{ThesisFiles/Thanks}
+
+%参考文献
+\phantomsection%生成该页的链接
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliographystyle{gbt7714-unsrt}%不对参考文献排序% gbt7714-plain%对参考文献排序 
+\bibliography{ThesisFiles/RefFile}%在正文中必须引用，才能显示对应的参考文献
+
+% 附录部分
+%\appendix
+%\input{ThesisFiles/Appendix}
+
+\end{document}
+
