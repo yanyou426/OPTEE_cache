@@ -1,0 +1,100 @@
+#include <linux/module.h>       /* Needed by all modules */
+#include <linux/kernel.h>       /* Needed for KERN_INFO */
+#include <linux/vmalloc.h>      /* need for vmalloc */
+#include <linux/proc_fs.h>      
+#include <linux/string.h>
+#include <asm/uaccess.h>
+#include <asm/tlbflush.h>
+#include <linux/slab.h>
+#include <linux/string.h>
+#include <linux/highmem.h>
+#include <linux/pfn.h>
+#include <linux/io.h>
+#include <linux/sched.h>
+#include <asm/switch_to.h>
+
+#include "internal.h"
+#include "configuration.h"
+#include "timing.h"
+
+MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("Cache Side Channel Attack Module");
+MODULE_AUTHOR("libflush");
+
+#define MAX_CMD_LEN
+#define MAL_PROC_ENTRY "kenable"
+
+inline void
+arm_v7_timing_init(bool div64)
+{
+    uint32_t value = 0;
+    unsigned int x = 0;
+
+    value |= ARMV7_PMCR_E; // Enable all counters
+    value |= ARMV7_PMCR_P; // Reset all counters
+    value |= ARMV7_PMCR_C; // Reset cycle counter to zero
+    value |= ARMV7_PMCR_X; // Enable export of events
+
+    if (div64 == true) {
+    value |= ARMV7_PMCR_D; // Enable cycle count divider
+    }
+
+    // Performance Monitor Control Register
+    asm volatile ("MCR p15, 0, %0, c9, c12, 0" :: "r" (value));
+
+    // Count Enable Set Register
+    value = 0;
+    value |= ARMV7_PMCNTENSET_C;
+
+    for (x = 0; x < 4; x++) {
+        value |= (1 << x); // Enable the PMx event counter
+    }
+
+    asm volatile ("MCR p15, 0, %0, c9, c12, 1" :: "r" (value));
+
+    // Overflow Flag Status register
+    value = 0;
+    value |= ARMV7_PMOVSR_C;
+
+    for (x = 0; x < 4; x++) {
+        value |= (1 << x); // Enable the PMx event counter
+    }
+    asm volatile ("MCR p15, 0, %0, c9, c12, 3" :: "r" (value));
+}
+
+int init_module(void)
+{
+    int ret = 0;
+
+    printk(KERN_INFO "********* Init Timing Counter *********");
+
+    arm_v7_timing_init(1);
+    return ret;
+}
+
+inline void
+arm_v7_timing_terminate(void)
+{
+  uint32_t value = 0;
+  uint32_t mask = 0;
+
+  // Performance Monitor Control Register
+  asm volatile ("MRC p15, 0, %0, c9, c12, 0" :: "r" (value));
+
+  mask = 0;
+  mask |= ARMV7_PMCR_E; /* Enable */
+  mask |= ARMV7_PMCR_C; /* Cycle counter reset */
+  mask |= ARMV7_PMCR_P; /* Reset all counters */
+  mask |= ARMV7_PMCR_X; /* Export */
+
+  asm volatile ("MCR p15, 0, %0, c9, c12, 0" :: "r" (value & ~mask));
+}
+
+void cleanup_module(void)
+{
+    arm_v7_timing_terminate();
+    printk(KERN_INFO "********* Terminate Timing Counter *********");
+}
+
+
+
